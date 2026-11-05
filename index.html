@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha Ecológica: O Jogo da Sustentabilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- O atributo defer garante que o script carregue no momento certo e os botões funcionem -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🌱 Trilha Ecológica</h1>
+        <p>Avance no tabuleiro científico e neutralize sua pegada de carbono!</p>
+    </header>
+
+    <main class="container">
+        <!-- ÁREA DO TABULEIRO E JOGO -->
+        <section class="game-box">
+            <div class="game-controls">
+                <div class="score-board">
+                    <span>Pontos de Sustentabilidade: <strong id="score-val">100</strong> ECO</span>
+                </div>
+                <button id="dice-btn" disabled>🎲 Girar Dado</button>
+                <div id="dice-result"></div>
+            </div>
+
+            <!-- TABULEIRO VIRTUAL -->
+            <div class="board-grid" id="board">
+                <!-- As casas do tabuleiro serão geradas dinamicamente via JavaScript -->
+            </div>
+        </section>
+
+        <!-- ÁREA DE EVENTOS E INTERAÇÃO -->
+        <section class="interaction-box">
+            <div id="start-screen">
+                <h2>Bem-vindo à Trilha!</h2>
+                <p>Seu objetivo é guiar o peão até o final da trilha mantendo sua pontuação de sustentabilidade alta. Cada casa possui um evento científico baseado em temas ecológicos reais!</p>
+                <button id="start-btn">Começar Jornada</button>
+            </div>
+
+            <div id="card-screen" class="hidden">
+                <h2 id="card-title">Tema da Casa</h2>
+                <div id="card-content"></div>
+                <div id="quiz-options" class="hidden"></div>
+                <div id="card-feedback" class="hidden"></div>
+                <button id="action-btn" class="hidden">Continuar</button>
+            </div>
+
+            <div id="end-screen" class="hidden">
+                <h2>Fim da Linha! 🎉</h2>
+                <p>Você completou a Trilha Ecológica!</p>
+                <h3 id="final-score-text">Sua pontuação final: 100 ECO</h3>
+                <div id="badge-result"></div>
+                <button id="restart-btn">Jogar Novamente</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Trabalho Acadêmico sobre Sustentabilidade | Criado com HTML, CSS e JavaScript</p>
+    </footer>
+</body>
+</html>
